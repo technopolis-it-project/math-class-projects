@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя первая страница</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #6e8efb;
+        }
+
+        h1 {
+            color: #5271ff;
+            margin-bottom: 15px;
+            font-size: 2.5rem;
+        }
+
+        .logo {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #5271ff, #8a54ff);
+            border-radius: 50%;
+            position: relative;
+            margin: 20px auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s infinite;
+        }
+
+        .logo::before {
+            content: "</>";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .content {
+            margin: 25px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .links {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+        }
+
+        .links h2 {
+            color: #5271ff;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .link-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .link-list a {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(to right, #5271ff, #8a54ff);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .link-list a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(to right, #3a57cc, #6d3ac2);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #6e8efb;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .link-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .link-list a {
+                width: 80%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="logo"></div>
+        <h1>Добро пожаловать на мою страницу</h1>
+        <p>Это простая HTML-страница с CSS-стилями и логотипом, созданным при помощи CSS</p>
+    </header>
+
+    <div class="content">
+        <p>Здесь вы можете найти полезные ресурсы для изучения веб-разработки. Нажмите на любую из ссылок ниже, чтобы перейти на соответствующий сайт.</p>
+
+        <div class="links">
+            <h2>Полезные ресурсы</h2>
+            <ul class="link-list">
+                <li><a href="https://htmlreference.io" target="_blank">HTML Справочник</a></li>
+                <li><a href="https://cssreference.io" target="_blank">CSS Справочник</a></li>
+                <li><a href="https://javascript.info" target="_blank">Учебник JavaScript</a></li>
+                <li><a href="https://github.com" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+
+        <p>Этот логотип полностью создан с помощью CSS. Он анимирован и меняет размер с помощью CSS-анимации.</p>
+        <p>Ссылки стилизованы с помощью градиентного фона и эффектов при наведении.</p>
+    </div>
+
+    <footer>
+        <p>© 2023 Моя первая HTML-страница. Все права защищены.</p>
+    </footer>
+</div>
+</body>
+</html>
